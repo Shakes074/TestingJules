@@ -18,6 +18,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo SITE_URL; ?>about.php">About</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo SITE_URL; ?>how_to_use.php">How to Use</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo SITE_URL; ?>contact.php">Contact</a>
+                </li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo SITE_URL; ?>dashboard.php">Dashboard</a>
@@ -28,9 +37,6 @@
                 <?php else: ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo SITE_URL; ?>login.php">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo SITE_URL; ?>register.php">Register</a>
                     </li>
                 <?php endif; ?>
             </ul>

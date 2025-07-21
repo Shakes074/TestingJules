@@ -1,6 +1,9 @@
 /* General Body Styles */
 body {
     background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -10,7 +13,7 @@ body {
 
 /* Main Container */
 .container {
-    min-height: 80vh;
+    flex: 1;
 }
 
 /* Forms */
@@ -23,9 +26,28 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Homepage Hero Section */
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1511795409834-ef04bbd51725?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+}
+
+/* Homepage Planner Sections */
+.planner-section {
+    transition: transform .2s;
+}
+.planner-section:hover {
+    transform: scale(1.05);
+}
+
 /* Footer */
 footer {
-    position: relative;
-    bottom: 0;
     width: 100%;
+    flex-shrink: 0;
+}
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
